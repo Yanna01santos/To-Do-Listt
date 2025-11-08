@@ -1,3 +1,6 @@
+from src.todo import ToDoList, TarefaDuplicadaError
+# ...existing code...
+
 def test_remover_tarefa_existente():
     """
     Quando eu removo uma tarefa existente,
