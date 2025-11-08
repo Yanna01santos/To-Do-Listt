@@ -114,3 +114,24 @@ class ToDoList:
         a lista interna diretamente.
         """
         return list(self._tarefas)
+    
+    class TodoList:
+        ...# restante do código permanece o mesmo
+        def remover_tarefa(self, titulo: str) -> None:
+            """
+            Remove uma tarefa da lista pelo título.
+
+            Levanta ValueError se a tarefa não for encontrada.
+            """
+            titulo_normalizado = titulo.strip()
+
+            for i, tarefa in enumerate(self._tarefas):
+                if tarefa["titulo"] == titulo_normalizado:
+                    # Remove a tarefa da lista pela a posição
+
+                    self._tarefas[i]
+                    return
+            
+            # Se a tarefa não foi encontrada, levanta erro
+            raise ValueError(f"Tarefa com título '{titulo_normalizado}' não encontrada.")
+             f"Não foi encontrada tarefa com o título '{titulo_normalizado}'."
